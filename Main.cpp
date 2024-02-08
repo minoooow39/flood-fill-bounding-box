@@ -11,7 +11,7 @@ int main()
 	// arbitrary rules:
 	// 0 = no color
 	// >0 = colored
-	std::vector<int> image = {
+	std::vector<char> image = {
 		0, 0, 3, 0, 0,
 		0, 2, 2, 2, 0,
 		0, 2, 2, 2, 0,
@@ -19,8 +19,11 @@ int main()
 		0, 0, 0, 0, 0
 	};
 
+	int height = 5;
+	int width = 5;
+
 	// will NOT mutate the image
-	FloodFill::Grid grid = FloodFill::Grid(image, FloodFill::Algorithm::QueueBFS);
+	FloodFill::Grid grid = FloodFill::Grid(image, height, width, FloodFill::Algorithm::QueueBFS);
 
 	FloodFill::Rect imageBoundaries = grid.GetBoundaries();
 

@@ -6,7 +6,7 @@
 
 namespace FloodFill
 {
-	Grid::Grid(const std::vector<int>& grid, Algorithm algo) : grid(grid), algo(algo)
+	Grid::Grid(const std::vector<char>& grid, int height, int width, Algorithm algo) : grid(grid), height(height), width(width), algo(algo)
 	{
 	}
 
@@ -58,7 +58,7 @@ namespace FloodFill
 
 	void Grid::DFSFloodFill(int index)
 	{
-		std::stack<int> pathStack{};
+		std::stack<char> pathStack{};
 
 		grid[index] = -1;
 
@@ -93,7 +93,7 @@ namespace FloodFill
 
 	void Grid::BFSFloodFill(int index)
 	{
-		std::queue<int> pathQueue{};
+		std::queue<char> pathQueue{};
 
 		grid[index] = -1;
 

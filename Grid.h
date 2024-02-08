@@ -27,13 +27,13 @@ namespace FloodFill
 	class Grid
 	{
 	public:
-		Grid(const std::vector<int>& grid, Algorithm algo);
+		Grid(const std::vector<char>& grid, int height, int width, Algorithm algo);
 	private:
-		static constexpr int height{ 5 };
-		static constexpr int width{ 5 };
-		std::vector<int> grid;
-		int minX{ width };
-		int minY{ height };
+		int const height{};
+		int const width{};
+		std::vector<char> grid;
+		int minX{ INT_MAX };
+		int minY{ INT_MAX };
 		int maxX{ -1 };
 		int maxY{ -1 };
 
