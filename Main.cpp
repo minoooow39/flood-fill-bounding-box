@@ -19,7 +19,7 @@ int main()
 		0, 0, 0, 0, 0
 	};
 
-	// will mutate the image
+	// will NOT mutate the image
 	FloodFill::Grid grid = FloodFill::Grid(image, FloodFill::Algorithm::QueueBFS);
 
 	FloodFill::Rect imageBoundaries = grid.GetBoundaries();
